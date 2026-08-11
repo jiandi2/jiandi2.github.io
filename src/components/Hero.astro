@@ -1,4 +1,4 @@
 ---
 import SealCover from './SealCover.astro';const {episode}=Astro.props;
 ---
-<section class="hero"><div><p class="eyebrow">本期特稿 · 经邦论策</p><h1>{episode.data.title}</h1><p class="lead">{episode.data.summary}</p><div class="tags">{episode.data.fields.map((f:string)=><span>{f}</span>)}</div><a class="button" href="/interviews/bai">进入本期 →</a></div><a class="hero-cover" href="/interviews/bai"><SealCover sealTitle={episode.data.sealTitle} guest={episode.data.guest} episodeNumber={episode.data.episodeNumber} color={episode.data.sealColor} tint={episode.data.sealTint}/></a></section>
+<section class="hero"><div><p class="eyebrow">本期特稿 · 经邦论策</p><h1>{episode.data.title}</h1><p class="lead">{episode.data.summary}</p><div class="tags">{episode.data.fields.map((f:string)=><span>{f}</span>)}</div><a class="button" href={`/interviews/${episode.id}`}>进入本期 →</a></div><a class="hero-cover" href={`/interviews/${episode.id}`}><SealCover sealTitle={episode.data.sealTitle} guest={episode.data.guest} episodeNumber={episode.data.episodeNumber} color={episode.data.sealColor} tint={episode.data.sealTint}/></a></section>

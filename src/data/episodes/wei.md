@@ -13,4 +13,5 @@ portraitPosition: "48% 32%"
 portrait: /images/wei-1.webp
 highlights: [好问题如何从生活中长出来, 从性别比到储蓄之谜, 在书斋与决策室之间]
 fields: [国际贸易, 中国经济, 政策实践]
+sourceUrl: "https://mp.weixin.qq.com/s?__biz=MzU3MzMwMDc0OA==&mid=2247499639&idx=1&sn=cb0daa7fb83db5664cb9af59cea98d19&chksm=fcc17614cbb6ff02f4f3833e802c683ca3ef30befc852014976e3f5dc1e223bc5c51d7402f9b&scene=178&cur_album_id=4626119397659787269&search_click_id=#rd"
 ---

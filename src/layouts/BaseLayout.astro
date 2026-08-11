@@ -1,0 +1,5 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';import SiteFooter from '../components/SiteFooter.astro';import {SITE_NAME} from '../site-config.mjs';import '../styles/tokens.css';import '../styles/global.css';
+const {title=SITE_NAME,description='与经济学家谈学问、时代与选择。'}=Astro.props;const full=title===SITE_NAME?title:`${title}｜${SITE_NAME}`;
+---
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="description" content={description}><meta name="robots" content="noindex,nofollow"><link rel="icon" href="/favicon.svg"><link rel="canonical" href={new URL(Astro.url.pathname,Astro.site)}><title>{full}</title></head><body><a class="skip" href="#content">跳到正文</a><SiteHeader/><main id="content"><slot/></main><SiteFooter/></body></html>

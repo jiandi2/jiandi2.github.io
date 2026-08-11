@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';const notes=[['来路','有些对话是有期限的','一个刚讲完半小时模型的人，被问了一个本科生第一节课的问题：什么是 GDP？'],['手艺','顶刊文章背后看不见的硬扛','五年级才开始学数值计算。我们太容易以为顶刊论文来自早早想清楚的规划。'],['见识','统计不平等与具体的人','统计上的不平等是真的，但它不该被翻译成对某个具体的人的预期。']];
+---
+<BaseLayout title="主持人手记"><header class="page-intro"><p class="eyebrow">主持人手记</p><h1>访谈结束后，问题还在继续</h1><p class="lead">不是访谈摘要，而是主持人的困惑、分歧与个人经验。</p></header><aside class="notice"><b>内测提示</b>　三篇均为初稿框架，须由主持人本人改写后正式发布。</aside><div class="notes">{notes.map((n,i)=><article><p class="eyebrow">白艳访谈 · {n[0]}</p><h2><a href={`/interviews/bai/${i+1}#主持人手记`}>{n[1]}</a></h2><p>{n[2]}</p><a class="text-link" href={`/interviews/bai/${i+1}#主持人手记`}>查看文中手记 →</a></article>)}</div></BaseLayout>

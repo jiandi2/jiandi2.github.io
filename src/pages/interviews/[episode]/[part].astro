@@ -1,0 +1,4 @@
+---
+import {getCollection,render} from 'astro:content';import ReadingLayout from '../../../layouts/ReadingLayout.astro';export async function getStaticPaths(){const parts=await getCollection('parts'),episodes=await getCollection('episodes');return parts.map(entry=>({params:{episode:entry.data.episode.id,part:String(entry.data.part)},props:{entry,episode:episodes.find(e=>e.id===entry.data.episode.id)}}))}const {entry,episode}=Astro.props;if(!episode)throw new Error('missing');const siblings=(await getCollection('parts')).filter(p=>p.data.episode.id===episode.id).sort((a,b)=>a.data.part-b.data.part),i=siblings.findIndex(p=>p.id===entry.id),previous=siblings[i-1],next=siblings[i+1];const {Content}=await render(entry);
+---
+<ReadingLayout entry={entry} episode={episode} previous={previous} next={next}><Content/></ReadingLayout>

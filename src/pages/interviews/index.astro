@@ -1,0 +1,4 @@
+---
+import {getEntry} from 'astro:content';import BaseLayout from '../../layouts/BaseLayout.astro';import Hero from '../../components/Hero.astro';const episode=await getEntry('episodes','bai');if(!episode)throw new Error('missing');
+---
+<BaseLayout title="访谈"><header class="page-intro"><p class="eyebrow">经邦论策 · 访谈档案</p><h1>经济学，不只发生在模型里</h1><p class="lead">从求学的偶然，到研究的手艺，再到对当下的判断。每一期都保留完整上下文。</p></header><div class="filters"><span class="on">全部</span><span>第一季</span><span>宏观经济</span><span>更多内容即将收入</span></div><Hero episode={episode}/></BaseLayout>

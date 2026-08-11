@@ -1,0 +1,4 @@
+---
+import {getCollection} from 'astro:content';import BaseLayout from '../../../layouts/BaseLayout.astro';export async function getStaticPaths(){return(await getCollection('episodes')).map(episode=>({params:{episode:episode.id},props:{episode}}))}const {episode}=Astro.props;
+---
+<BaseLayout title={`${episode.data.guest}访谈全文`}><section class="status"><p class="eyebrow">完整存档</p><h1>{episode.data.guest}访谈全文版</h1><p>完整单页正在整理中。正式上线时将保留所有未收录段落。</p><a class="button" href={`/interviews/${episode.id}`}>返回本期目录</a></section></BaseLayout>

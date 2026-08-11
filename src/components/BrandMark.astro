@@ -1,0 +1,5 @@
+---
+const {stacked=false,inverse=false,compact=false}=Astro.props;
+---
+<span class:list={['brand-mark',{stacked,inverse,compact}]} role="img" aria-label="见地 Insights"><b aria-hidden="true">见地</b><i aria-hidden="true"></i><small aria-hidden="true">INSIGHTS</small></span>
+<style>.brand-mark{display:inline-flex;align-items:center;gap:.65em;color:var(--ink);white-space:nowrap}.brand-mark b{font:650 27px/1 ui-serif,"Songti SC","STSong",serif;letter-spacing:.16em}.brand-mark i{display:block;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.72}.brand-mark small{font:650 9px/1 ui-sans-serif,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;letter-spacing:.24em}.brand-mark.stacked{flex-direction:column;gap:.48em}.brand-mark.stacked b{font-size:25px;letter-spacing:.18em;padding-left:.18em}.brand-mark.stacked i{width:4px;height:4px}.brand-mark.stacked small{font-size:8px;letter-spacing:.2em;padding-left:.2em}.brand-mark.inverse{color:#fff}.brand-mark.compact b{font-size:21px}.brand-mark.compact small{font-size:7px}.brand-mark.compact{gap:.38em}</style>

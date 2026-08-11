@@ -1,4 +1,4 @@
 ---
-const p=Astro.url.pathname; const active=(h:string)=>h==='/'?p==='/':p.startsWith(h);
+import BrandMark from './BrandMark.astro';const p=Astro.url.pathname;const active=(h:string)=>h==='/'?p==='/':p.startsWith(h);
 ---
-<header class="site-header"><a class="brand" href="/"><b>见地</b><small>INSIGHTS</small></a><nav aria-label="主导航"><a class:list={{active:active('/interviews')}} href="/interviews">访谈</a><a class:list={{active:active('/notes')}} href="/notes">手记</a><a class:list={{active:active('/about')}} href="/about">关于</a><a class="subscribe" href="/subscribe">订阅</a></nav></header>
+<header class="site-header"><a class="brand" href="/" aria-label="见地首页"><BrandMark/></a><nav aria-label="主导航"><a class:list={{active:active('/interviews')}} href="/interviews">访谈</a><a class:list={{active:active('/notes')}} href="/notes">手记</a><a class:list={{active:active('/about')}} href="/about">关于</a><a class="subscribe" href="/subscribe">订阅</a></nav></header>

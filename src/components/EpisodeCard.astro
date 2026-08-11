@@ -1,4 +1,4 @@
 ---
 import SealCover from './SealCover.astro';const x=Astro.props;
 ---
-<article class="card"><a href={x.href}><SealCover sealTitle={x.sealTitle} guest={x.guest} episodeNumber={x.episodeNumber} color={x.color} tint={x.tint} image={x.portrait} wide/></a><div><p class="eyebrow">{x.eyebrow}</p><h3><a href={x.href}>{x.title}</a></h3><p>{x.summary}</p><a class="text-link" href={x.href}>阅读全文 →</a></div></article>
+<article class="card"><a href={x.href}><SealCover sealTitle={x.sealTitle} guest={x.guest} episodeNumber={x.episodeNumber} color={x.color} tint={x.tint} image={x.portrait} imagePosition={x.portraitPosition} wide/></a><div><p class="eyebrow">{x.eyebrow}</p><h3><a href={x.href}>{x.title}</a></h3><p>{x.summary}</p><a class="text-link" href={x.href}>阅读全文 →</a></div></article>

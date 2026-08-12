@@ -9,8 +9,8 @@ sealColor: "#7f4038"
 sealTint: "#f2e6e2"
 title: 方汉明：在变化的求职市场里寻找自己的路
 summary: 从复旦求学、与经济学结缘，到美国求职市场与学术职业的长期选择；方汉明回望一位经济学家的成长，也给年轻学者讲述面试、报告与研究规划。
-portraitPosition: "50% 26%"
-portraitScale: 1.05
+portraitPosition: "50% 36%"
+portraitScale: 1.0
 portrait: /images/fang.webp
 highlights: [与经济学结缘的偶然与选择, 求职市场的变与不变, 博士生涯的前瞻与回望]
 fields: [劳动经济学, 卫生经济学, 公共经济学]

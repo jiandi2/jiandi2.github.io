@@ -9,7 +9,7 @@ sealColor: "#35556d"
 sealTint: "#e6edf1"
 title: 苗建军：好的理论，首先要有直觉
 summary: 从罗切斯特学派的训练，到资产泡沫与不确定性理论，再到回国建设宏观经济学共同体；苗建军谈数学模型背后的故事、选题判断与年轻学者的时间配置。
-portraitPosition: "50% 0%"
+portraitPosition: "50% 30%"
 portraitScale: 1.0
 portrait: /images/miao-poster.webp
 highlights: [罗切斯特学派留下的烙印, 从解题走向讲故事, 理论如何回应中国问题]

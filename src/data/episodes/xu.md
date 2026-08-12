@@ -9,7 +9,8 @@ sealColor: "#4b715c"
 sealTint: "#e5eee8"
 title: 徐熠：把最硬的数据，用在最真的问题上
 summary: 从上海财经大学到宾州州立与杜克，从企业数据的艰难获取到产业政策、国际贸易与市场势力；徐熠讲述实证经济学的手艺，以及把研究带回中国的长期努力。
-portraitPosition: "62% 45%"
+portraitPosition: "100% 45%"
+portraitScale: 1.12
 portrait: /images/xu.webp
 highlights: [从上财到宾州州立的求学路, 企业数据背后的取数故事, 经世致用地研究中国问题]
 fields: [国际贸易, 产业组织, 发展经济学]

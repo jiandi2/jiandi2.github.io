@@ -10,6 +10,7 @@ sealTint: "#e8ebf0"
 title: 潘军：从物理到金融，选择比规划更重要
 summary: 从上海交大物理系、纽约大学到斯坦福与 MIT，再到全职回到母校；潘军谈资产定价研究、顶级金融期刊的编辑判断，以及一条并非预先设计的人生道路。
 portraitPosition: "50% 31%"
+portraitScale: 1.0
 portrait: /images/pan.webp
 highlights: [从物理学跨入金融学, 在 MIT 的十九年与回国选择, 资产定价和中国资本市场]
 fields: [资产定价, 金融市场, 中国资本市场]

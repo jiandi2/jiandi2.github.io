@@ -9,7 +9,8 @@ sealColor: "#8b493b"
 sealTint: "#f4e8df"
 title: 宋铮：像侦探一样寻找中国增长的事实
 summary: 从斯德哥尔摩 IIES 的纯粹学术环境，到 Growing Like China 的诞生；宋铮讲述如何从制度细节与历史数据出发，建立能够反哺一般经济学的中国研究。
-portraitPosition: "50% 34%"
+portraitPosition: "50% 0%"
+portraitScale: 1.0
 portrait: /images/song.webp
 highlights: [北欧纯粹学术留下的烙印, Growing Like China 如何诞生, 做经济学界的数据侦探]
 fields: [制度宏观, 中国增长, 数据考古]

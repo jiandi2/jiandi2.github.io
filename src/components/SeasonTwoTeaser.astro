@@ -1,0 +1,21 @@
+---
+import BrandMark from './BrandMark.astro';
+---
+<section class="season-two-preview" id="season-two" aria-label="第二季预告">
+  <div class="season-copy">
+    <p class="eyebrow">第二季预告</p>
+    <h2>继续追问，学问如何成为一种人生</h2>
+    <p>第二季将沿着学者的来路，进入研究的手艺，也抵达由经验与思考沉淀而成的见识。</p>
+    <a class="text-link" href="/interviews/#season-two">查看第二季预告 →</a>
+  </div>
+  <a class="season-poster" href="/interviews/#season-two" aria-label="第二季敬请期待：来路、手艺、见识">
+    <small>经邦论策 · 第二季</small>
+    <div class="coming">敬请期待</div>
+    <div class="themes"><b>来路</b><i></i><b>手艺</b><i></i><b>见识</b></div>
+    <div class="poster-brand"><BrandMark stacked compact/></div>
+    <em>二季</em>
+  </a>
+</section>
+<style>
+.season-two-preview{width:var(--wide);margin:112px auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(430px,1.15fr);gap:clamp(48px,8vw,100px);align-items:center}.season-copy h2{max-width:9em;margin:.25em 0 .55em;font:600 clamp(34px,4vw,52px)/1.3 var(--display,ui-serif);letter-spacing:.01em}.season-copy>p:not(.eyebrow){max-width:29em;color:var(--muted);font-family:var(--body-serif,ui-serif);font-size:18px;line-height:1.9}.season-copy .text-link{display:inline-block;margin-top:12px}.season-poster{position:relative;aspect-ratio:4/3;overflow:hidden;padding:7% 8%;color:#3f4a45;background:radial-gradient(circle at 72% 20%,rgba(255,255,255,.7),transparent 34%),linear-gradient(145deg,#f5eddd 0%,#eee2cb 58%,#e5d7bd 100%);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;isolation:isolate}.season-poster:before,.season-poster:after{content:"";position:absolute;pointer-events:none}.season-poster:before{inset:16px;border:1px solid rgba(91,91,75,.36)}.season-poster:after{z-index:-1;width:56%;aspect-ratio:1;border:1px solid rgba(149,107,36,.2);border-radius:50%}.season-poster small{position:absolute;top:8%;left:8%;font:650 10px/1.4 var(--ui,ui-sans-serif);letter-spacing:.22em;color:#59635e}.coming{margin-bottom:5%;color:#956b24;font:650 12px/1.4 var(--ui,ui-sans-serif);letter-spacing:.38em}.themes{display:flex;align-items:center;gap:clamp(12px,2.2vw,25px)}.themes b{font:600 clamp(30px,4vw,52px)/1.1 var(--display,ui-serif);letter-spacing:.08em;text-shadow:0 1px 0 rgba(255,255,255,.45)}.themes i{width:5px;height:5px;border-radius:50%;background:#a98245}.poster-brand{position:absolute;left:7%;bottom:7%;color:#35433e}.season-poster em{position:absolute;right:7%;bottom:7%;width:42px;height:42px;border:1px solid rgba(151,89,70,.62);color:#9b5f4f;display:flex;align-items:center;justify-content:center;font:600 12px/1.1 var(--display,ui-serif);font-style:normal;letter-spacing:.08em}.season-poster:hover{transform:translateY(-4px);box-shadow:0 22px 58px rgba(27,43,37,.16)}@media(max-width:850px){.season-two-preview{grid-template-columns:1fr;gap:32px}.season-copy h2{max-width:13em}}@media(max-width:640px){.season-two-preview{margin:72px auto;gap:26px}.season-copy h2{font-size:31px}.season-copy>p:not(.eyebrow){font-size:16.5px}.season-poster{width:calc(100% + 32px);margin-left:-16px;box-shadow:none}.season-poster:hover{transform:none}.season-poster small{font-size:9px}.themes{gap:12px}.themes b{font-size:clamp(27px,8.5vw,36px)}}
+</style>

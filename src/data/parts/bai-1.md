@@ -18,7 +18,7 @@ hostNoteDraft: true
 
 **冯志钢：** 各位听众朋友大家好，欢迎回到《经邦论策》。我是冯志钢。
 
-今天这位嘉宾，是定量主权违约模型的领军人物之一——罗切斯特大学的白艳教授。她本科就读于北京大学中国经济研究中心（CCER），博士毕业于明尼苏达大学，曾与诺奖得主 Edward Prescott 共事数年，现任《Journal of International Economics》联合主编。（完整简介见文末。）
+今天这位嘉宾，是定量主权违约模型的领军人物之一——罗切斯特大学的白艳教授。她本科就读于[北京大学中国经济研究中心（CCER）](https://en.nsd.pku.edu.cn/)，博士毕业于明尼苏达大学，曾与诺奖得主 [Edward Prescott](https://www.nobelprize.org/prizes/economic-sciences/2004/prescott/facts/) 共事数年，现任《Journal of International Economics》联合主编。（完整简介见文末。）
 
 白老师，欢迎您！
 
@@ -30,7 +30,7 @@ hostNoteDraft: true
 
 **白艳：** 在 CCER 的整个过程是一个受益匪浅的学习历程。刚到中心的时候还比较年轻，很多东西其实听不太懂，因为刚从本科毕业。但我觉得一个很关键的点，就是我们当时的基础打得特别好。整个 CCER 对我们的训练非常扎实、非常严谨。
 
-更重要的是，我们学到了一种治学的精神。比如宋国清老师对我们有很严格的要求，周其仁老师深入实践、扎根调研的作风，林毅夫老师把国家发展担为己任的精神——很多老师从不同角度潜移默化地影响着我们。姚老师教我们微观经济学的时候非常硬核，胡大元老师给我们讲计量经济学，全程用英语授课，在当时是非常少见的。
+更重要的是，我们学到了一种治学的精神。比如[宋国清老师](https://nsd.pku.edu.cn/szdw/fpjs/5bd7e79cd3744c1fa01c8a3abda83830.htm)对我们有很严格的要求，周其仁老师深入实践、扎根调研的作风，林毅夫老师把国家发展担为己任的精神——很多老师从不同角度潜移默化地影响着我们。姚老师教我们微观经济学的时候非常硬核，胡大元老师给我们讲计量经济学，全程用英语授课，在当时是非常少见的。
 
 还有一点让我印象很深，就是那种国际化的视野。**林老师、海老师他们经常是刚从美国坐完长途飞机回来，就到中心给我们开组会，看看我们的研究进展，鼓励一下我们。每个老师都在竭尽全力为我们争取最大的机会。** 中心当时的目标特别明确：希望我们出国继续深造，学到最先进的经济学理论，然后再回来。所以从各方面给了我们大量的支持和帮助。
 
@@ -56,11 +56,11 @@ hostNoteDraft: true
 
 **白艳：** 明尼苏达对我的影响也是潜移默化的。读博期间并没有真正意识到自己被塑造得这么好，但后来回想起来，很多东西的影响是深远的。
 
-首先是课程，非常硬核。因为当年 Edward Prescott 在的缘故，我们对计量经济学没有要求——这其实也不一定是好事，后来计量对我来说是个短板。但数学课的要求非常高。**我们去了明尼苏达，上两年数学课是很正常的**：实分析（real analysis）、测度论与概率论（measure theory and probability theory）。最近，我看到 Tom Sargent 到现在还在 YouTube 上看各种数学课，我觉得很有意思、也很受启发。
+首先是课程，非常硬核。因为当年 Edward Prescott 在的缘故，我们对计量经济学没有要求——这其实也不一定是好事，后来计量对我来说是个短板。但数学课的要求非常高。**我们去了明尼苏达，上两年数学课是很正常的**：实分析（real analysis）、测度论与概率论（measure theory and probability theory）。最近，我看到 [Tom Sargent](https://www.nobelprize.org/prizes/economic-sciences/2011/sargent/facts/) 到现在还在 YouTube 上看各种数学课，我觉得很有意思、也很受启发。
 
 宏观课的师资堪称梦之队：Tim Kehoe、Ed Prescott、Narayana Kocherlakota。我记得 Kocherlakota 的课，第一节课就把整个学期的作业全部发下来了，一大本子，大家就开始做。他的作业每年也不变，但也没有人去抄上一届的，大家就硬做。好在我们一个班大概二十个人，有一间大办公室，十个一年级学生挤在一起，对面一块长长的黑板，大家就在一起做作业。虽然很苦，但总觉得有同伴在，还是有支撑的。
 
-还有一点潜移默化体会到的，就是非常重视严谨性，重视一般均衡（general equilibrium）、内生模型（endogenous model），重视微观基础（micro foundation）。这是整个明尼苏达学派的核心。当然，明尼苏达的特点是非常注重定量分析，但同时老师们也很注重理论的微观基础。尤其是我的导师 Patrick Kehoe，他希望你的理论里有一个"twist"——在现有理论的基础上有一点推进，让你去推动学术前沿。
+还有一点潜移默化体会到的，就是非常重视严谨性，重视一般均衡（general equilibrium）、内生模型（endogenous model），重视微观基础（micro foundation）。这是整个明尼苏达学派的核心。当然，明尼苏达的特点是非常注重定量分析，但同时老师们也很注重理论的微观基础。尤其是我的导师 [Patrick Kehoe](https://economics.stanford.edu/people/patrick-kehoe)，他希望你的理论里有一个"twist"——在现有理论的基础上有一点推进，让你去推动学术前沿。
 
 ## Prescott 的灵魂之问：What's a firm?
 
@@ -70,11 +70,11 @@ hostNoteDraft: true
 
 到了亚利桑那州立大学之后，我发现 Ed 喜欢问一些非常简单，但直击问题灵魂的问题。比如在美联储的午间研讨会上，他经常吃完饭就睡着了，然后突然醒过来问演讲者：What's a firm? 刚开始觉得这问题好奇怪，但你要仔细想想，你也不知道怎么回答——到底什么是企业？他其实是在问你：你的模型里怎么刻画企业？它是一个技术？还是什么别的东西？这个问题看似简单，实则非常深刻。
 
-当时我在做那篇关于金融摩擦的论文"Solving the Feldstein-Horioka Puzzle with Financial Frictions"，每天早上八点多 Ed 都会到办公室。我们俩的对话围绕一个主题：他每次问我，到底什么是金融摩擦（financial friction）？我用国际金融摩擦来解释整篇文章的核心机制，他就反复追问这个问题。我们那一整个学期的对话都围绕着"什么是金融摩擦"。现在回想起来，我可能会有一个更好的答案，但当时确实不明白他这个问题的核心在哪里——什么答案他都不满意，我们俩可能一直在绕圈子。
+当时我在做那篇关于金融摩擦的论文["Solving the Feldstein-Horioka Puzzle with Financial Frictions"](https://www.econometricsociety.org/publications/econometrica/2010/03/01/solving-feldstein%E2%80%93horioka-puzzle-financial-frictions)，每天早上八点多 Ed 都会到办公室。我们俩的对话围绕一个主题：他每次问我，到底什么是金融摩擦（financial friction）？我用国际金融摩擦来解释整篇文章的核心机制，他就反复追问这个问题。我们那一整个学期的对话都围绕着"什么是金融摩擦"。现在回想起来，我可能会有一个更好的答案，但当时确实不明白他这个问题的核心在哪里——什么答案他都不满意，我们俩可能一直在绕圈子。
 
 ## 诺奖得主的停车位
 
-**白艳：** 大师们其实都非常平易近人。那会儿中午出去吃饭，通常是 Ed Prescott、Berthold Herrendorf、Richard Rogerson 和我四个人。我当时只是一个小小的助理教授，但每次都是 Ed 开车。
+**白艳：** 大师们其实都非常平易近人。那会儿中午出去吃饭，通常是 Ed Prescott、[Berthold Herrendorf](https://asura.asu.edu/berthold-herrendorf)、[Richard Rogerson](https://economics.princeton.edu/people/richard-rogerson/) 和我四个人。我当时只是一个小小的助理教授，但每次都是 Ed 开车。
 
 为什么呢？因为只有他有一个特殊的停车位——学校给诺奖得主的荣誉，他开出去回来还能停在原处，我们任何人开出去，回来就没有车位了。
 
@@ -93,7 +93,7 @@ hostNoteDraft: true
 ---
 
 > **下一集预告**
-> 五年级初，白艳和搭档张晶展示了一篇全局博弈的理论论文。听完之后，Andrew Atkeson 对她们说了一句话，直接改变了两个人的研究方向——也间接促成了那篇发表在 *Econometrica* 上的文章。
+> 五年级初，白艳和搭档张晶展示了一篇全局博弈的理论论文。听完之后，[Andrew Atkeson](https://economics.ucla.edu/person/andrew-atkeson/) 对她们说了一句话，直接改变了两个人的研究方向——也间接促成了那篇发表在 [*Econometrica*](https://www.econometricsociety.org/publications/econometrica) 上的文章。
 > 那句话是什么？下一集《手艺》，我们从一道课堂习题讲到顶刊。
 
 ---

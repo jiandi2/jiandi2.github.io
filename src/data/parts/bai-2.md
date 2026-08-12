@@ -9,18 +9,18 @@ hostNoteDraft: true
 ---
 
 > **编者按**
-> 上一集，一个"从来不想出国"的人走进了明尼苏达。这一集讲手艺——一篇发表在 *Econometrica* 上的论文，是怎么从一道课堂作业长出来的。
-> 里面有两句话值得所有做研究的人记住。一句来自 Andrew Atkeson："我觉得你们俩还是不要做理论了。"另一句来自编辑 Harald Uhlig，他连着四五轮都这么说："下一轮我就要拒掉你们了。"
+> 上一集，一个"从来不想出国"的人走进了明尼苏达。这一集讲手艺——一篇发表在 [*Econometrica*](https://www.econometricsociety.org/publications/econometrica) 上的论文，是怎么从一道课堂作业长出来的。
+> 里面有两句话值得所有做研究的人记住。一句来自 [Andrew Atkeson](https://economics.ucla.edu/person/andrew-atkeson/)："我觉得你们俩还是不要做理论了。"另一句来自编辑 [Harald Uhlig](https://economics.uchicago.edu/directory/harald-uhlig)，他连着四五轮都这么说："下一轮我就要拒掉你们了。"
 
 ---
 
 ## 从一道课堂习题开始
 
-**冯志钢：** 您 2010 年与张晶合作发表在 *Econometrica* 上的文章"Solving the Feldstein-Horioka Puzzle with Financial Frictions"是国际宏观领域的经典之作。这篇文章数理性非常强，我自己也做过类似的非最优动态均衡模型的研究，深知这类工作从想法到最终成型需要克服很多困难。能否分享一下，这篇文章最初的研究灵感是怎么来的？
+**冯志钢：** 您 2010 年与张晶合作发表在 *Econometrica* 上的文章["Solving the Feldstein-Horioka Puzzle with Financial Frictions"](https://www.econometricsociety.org/publications/econometrica/2010/03/01/solving-feldstein%E2%80%93horioka-puzzle-financial-frictions)是国际宏观领域的经典之作。这篇文章数理性非常强，我自己也做过类似的非最优动态均衡模型的研究，深知这类工作从想法到最终成型需要克服很多困难。能否分享一下，这篇文章最初的研究灵感是怎么来的？
 
 **白艳：** 看起来好像我选了一个很硬核的东西，但其实**都是一个边做边学的过程**。
 
-选题来源于 Patrick Kehoe 的一个国际宏观 workshop。当时 Kehoe 让我们几个学生两两一组，去看 Obstfeld 和 Rogoff 那篇经典的"The Six Major Puzzles in International Macroeconomics"，每个组选一个谜题做个展示，然后用模型来分析。我和张晶就选了 Feldstein-Horioka 之谜。
+选题来源于 Patrick Kehoe 的一个国际宏观 workshop。当时 Kehoe 让我们几个学生两两一组，去看 Obstfeld 和 Rogoff 那篇经典的["The Six Major Puzzles in International Macroeconomics"](https://www.nber.org/papers/w7777)，每个组选一个谜题做个展示，然后用模型来分析。我和张晶就选了 Feldstein-Horioka 之谜。
 
 当时读原始论文的时候，它说如果是完全市场（complete market）模型，储蓄和投资就没有任何关系。我们怎么想也想不明白为什么，原论文讲得也比较笼统。所以我们就说，那我们先解一个完全市场模型看看。解完之后发现相关系数确实是零。然后我们就加了金融摩擦来解这个模型。
 
@@ -30,7 +30,7 @@ hostNoteDraft: true
 
 所以我们就转向了这篇关于金融摩擦的论文。其实是五年级初才开始学数值计算的，以前连 Fortran 都不太会用，Matlab 也只是很少用过，都是那个时候才开始学的。
 
-我还有一个原因觉得我很幸运。在明尼苏达的时候，大家没有一个界限说谁能做什么、谁不能做什么。我们当时有一个一直在流传的故事：Dirk Krueger 1999 年上求职市场的时候，他的求职论文要解一个有限执行（limited enforcement）模型。据说他当时也不会做数值计算，是上市场的时候为了写这篇论文才学的。为了解这个模型，他住在明尼阿波利斯联邦储备银行里——那里三班倒，晚上还有夜宵，吃住健身洗澡都在一栋楼里解决，这样就可以全天候做计算。
+我还有一个原因觉得我很幸运。在明尼苏达的时候，大家没有一个界限说谁能做什么、谁不能做什么。我们当时有一个一直在流传的故事：[Dirk Krueger](https://economics.sas.upenn.edu/people/dirk-krueger) 1999 年上求职市场的时候，他的求职论文要解一个有限执行（limited enforcement）模型。据说他当时也不会做数值计算，是上市场的时候为了写这篇论文才学的。为了解这个模型，他住在明尼阿波利斯联邦储备银行里——那里三班倒，晚上还有夜宵，吃住健身洗澡都在一栋楼里解决，这样就可以全天候做计算。
 
 **听了这样的故事，你就觉得：既然别人能做到，我也可以做到。**
 

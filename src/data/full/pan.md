@@ -11,11 +11,11 @@ wordCount: 17696
 
 **冯志钢**：CES 的读者朋友们，大家好，欢迎回到《经邦论策》。我是冯志钢。在过去几期节目中，我们与多位经济学家从微观实证、宏观理论、制度宏观、到国际宏观，探讨了经济学研究的不同路径。今天，我们将迎来《经邦论策》的第一位金融学家——一位站在全球资产定价研究最前沿、却又格外谦逊低调的学者；一位从物理学跨界到金融学、又毅然从MIT回到母校上海交大的传奇人物。
 
-在金融学界，有一篇论文几乎是资产定价领域的"基础设施"——发表在《Econometrica》上的"Transform Analysis and Asset Pricing for Affine Jump-Diffusions"。这篇论文为仿射跳跃-扩散模型下的资产定价提供了统一框架，被广泛应用于期权定价、信用风险、利率模型等几乎所有金融工程领域，引用超过四千次，并于2015年荣获金融经济学领域最重要的奖项之一——**Stephen A. Ross Prize**。这篇论文的作者之一，就是我们今天的嘉宾——上海交通大学上海高级金融学院讲席教授潘军老师。
+在金融学界，有一篇论文几乎是资产定价领域的"基础设施"——发表在《Econometrica》上的["Transform Analysis and Asset Pricing for Affine Jump-Diffusions"](https://www.gsb.stanford.edu/faculty-research/research/publications/transform-analysis-asset-pricing-affine-jump-diffusions)。这篇论文为仿射跳跃-扩散模型下的资产定价提供了统一框架，被广泛应用于期权定价、信用风险、利率模型等几乎所有金融工程领域，引用超过四千次，并于2015年荣获金融经济学领域最重要的奖项之一——**Stephen A. Ross Prize**。这篇论文的作者之一，就是我们今天的嘉宾——上海交通大学上海高级金融学院讲席教授潘军老师。
 
 潘老师的学术经历本身就是一段传奇。她1990年从上海交大物理系毕业，1995年在纽约大学获得物理学博士，2000年又在斯坦福大学商学院获得金融学博士学位。早在求学期间，潘老师便已锋芒初露——1995年获美国女性科学家协会颁发的Luise Meyer-Schutzmeister Award，1996至97年获斯坦福商学院Jaedicke Fellowship，1998至99年获斯坦福大学Lieberman Fellowship，2001年又荣获西伊利诺伊大学校友成就奖（Alumni Achievement Award），2003年以"The Information in Option Volume for Stock Prices"一文摘得CQA年度学术竞赛一等奖。2000年从斯坦福毕业后，潘老师直接加入MIT斯隆管理学院执教十九载，并于2010年荣膺MIT斯隆管理学院杰出教授（School of Management Distinguished Professor）。2019年，她做出了一个令很多人意外的决定——离开MIT，全职回到母校上海交大，加入上海高级金融学院。
 
-潘老师在学术服务上同样举足轻重：现任《Review of Finance》主编（2022年起）、《Journal of Finance》副主编（2022年起），西方金融学会（WFA）董事（2025–2028），美国金融学会（AFA）提名委员会委员（2025），亚洲金融与经济研究局（ABFER）执行委员会委员，并曾担任SFS Cavalcade Asia-Pacific 2024大会主席、CICF 2015/2017/2018程序委员会主席。她的研究横跨资产定价、衍生品市场、信用风险、市场流动性、金融科技与中国资本市场，连续四年（2021–2024）入选爱思唯尔"中国被引学者"榜单。她与耿哲合作的"The SOE Premium and Government Support in China's Credit Market"于2024年发表于《Journal of Finance》，并曾获2021年CICF最佳论文奖。
+潘老师在学术服务上同样举足轻重：现任《Review of Finance》主编（2022年起）、《Journal of Finance》副主编（2022年起），西方金融学会（WFA）董事（2025–2028），美国金融学会（AFA）提名委员会委员（2025），亚洲金融与经济研究局（ABFER）执行委员会委员，并曾担任SFS Cavalcade Asia-Pacific 2024大会主席、CICF 2015/2017/2018程序委员会主席。她的研究横跨资产定价、衍生品市场、信用风险、市场流动性、金融科技与中国资本市场，连续四年（2021–2024）入选爱思唯尔"中国被引学者"榜单。她与耿哲合作的["The SOE Premium and Government Support in China's Credit Market"](https://www.nber.org/papers/w26575)于2024年发表于《Journal of Finance》，并曾获2021年CICF最佳论文奖。
 
 在金融学顶尖学者的群像中，潘老师无疑属于最具影响力的少数几位之一；而越是与她接触，越能感受到她身上那种"高山仰止"与"温润如玉"并存的气质——成就斐然却谦和低调。今天能请到潘老师做客《经邦论策》，是我们莫大的荣幸。更精彩的故事，还是要请潘老师亲自为我们娓娓道来。潘老师，欢迎您！
 
@@ -49,19 +49,19 @@ wordCount: 17696
 
 **冯志钢**：您讲的这一段经历里有一个特别有意思的"结构"——一个看似随机的过程，中间贯穿着一些插曲……这些零散事件最后竟汇成一条相当确定的轨迹。我猜这个过程里还有两本书起了关键作用？
 
-**潘军**：对。其实我最想去的是MIT，因为我读了一本书叫**《Capital Ideas》**（彼得·伯恩斯坦著）。这本书很特别——它每一章讲一个金融学的成果，但它有趣的地方是，**它不仅讲这个金融模型或理念，还讲这些模型背后的教授**——是一种全方位的展示，让我看到金融学的academic到底是什么样子。我读那本书的时候相当excited，读完心想"我得去MIT"，因为里面有一章讲期权——其实那时候 Black、Scholes、Merton 都已经离开 MIT了，但 MIT 在我心里还是一个圣地。可惜MIT没有录取我。
+**潘军**：对。其实我最想去的是MIT，因为我读了一本书叫**[《Capital Ideas》](https://www.wiley.com/en-us/Capital+Ideas%3A+The+Improbable+Origins+of+Modern+Wall+Street-p-9780471731740)**（彼得·伯恩斯坦著）。这本书很特别——它每一章讲一个金融学的成果，但它有趣的地方是，**它不仅讲这个金融模型或理念，还讲这些模型背后的教授**——是一种全方位的展示，让我看到金融学的academic到底是什么样子。我读那本书的时候相当excited，读完心想"我得去MIT"，因为里面有一章讲期权——其实那时候 Black、Scholes、Merton 都已经离开 MIT了，但 MIT 在我心里还是一个圣地。可惜MIT没有录取我。
 
-第二本书是Darrell Duffie的**《Dynamic Asset Pricing Theory》**——也就是后来我导师那本。在我去斯坦福之前，有人推荐我看，我当然完全看不懂，但我意识到一点：金融可以做得很 technical，technical skill在金融里是有用的。两本书一起，把"金融的学术世界"给我点亮了。
+第二本书是Darrell Duffie的**[《Dynamic Asset Pricing Theory》](https://press.princeton.edu/books/hardcover/9780691090221/dynamic-asset-pricing-theory)**——也就是后来我导师那本。在我去斯坦福之前，有人推荐我看，我当然完全看不懂，但我意识到一点：金融可以做得很 technical，technical skill在金融里是有用的。两本书一起，把"金融的学术世界"给我点亮了。
 
 ### 斯坦福、Duffie 与那篇 *Econometrica* 论文
 
-**冯志钢**：在斯坦福师从Darrell Duffie——他是连续时间金融理论的权威。能不能分享一下您在斯坦福的学习经历？尤其是那篇后来获得Ross Prize的Affine Jump-Diffusions论文，是怎么以一个博士生的身份参与进去的？
+**冯志钢**：在斯坦福师从[Darrell Duffie](https://www.gsb.stanford.edu/faculty-research/faculty/darrell-duffie)——他是连续时间金融理论的权威。能不能分享一下您在斯坦福的学习经历？尤其是那篇后来获得Ross Prize的Affine Jump-Diffusions论文，是怎么以一个博士生的身份参与进去的？
 
 **潘军**：我去斯坦福之前，那时候已经有不少学物理学、学数学的人去华尔街做quant了，投行也愿意 hire 他们。但 Duffie 那本书让我意识到——做金融不只是去华尔街做工具人，它也可以是非常严肃的学术研究。**到底有多少是 economic insight，有多少是 technical skill，怎么 mix——这是个人的judgment**。技术做得好可以走得很快，但做不好的话，你的 work 就会很 mechanical。我很早就意识到，我个人更喜欢做 idea-driven 的工作。
 
 我去斯坦福以后非常 lucky，很快就有机会做 Duffie 的 RA。这其中其实有个机缘巧合：你去看 Duffie 招的华人博士生有一个 sequence——第一位是从物理 PhD 转过来的学生，他和 Duffie 合作写了一篇很重要的仿射期限结构论文；第二位是黄明，他那时候 absolutely 是个 superstar——毕业的时候，他的大幅照片放在杂志的封面上，相当瞩目。**黄明刚毕业去芝加哥，Duffie 正好缺一个 RA。我没有想这么多，就直接跟 Duffie 说："我想做你的 RA。" Duffie 说："正好我有一个位置。"** 这就是缘分。
 
-后来我和Duffie、Kenneth Singleton——他后来也成为我的另一位导师——一起写了那篇 "Transform Analysis and Asset Pricing for Affine Jump-Diffusions"。这篇 paper 是相当 technical 的，在我上 job market 之前已经被 *Econometrica* 接受了。这对我是一个很重要的洗礼，因为你能碰到各种各样的人，他们的 reactions 会 inform 你的判断；同时你内心也要有一个足够强的 core。
+后来我和Duffie、[Kenneth Singleton](https://www.gsb.stanford.edu/faculty-research/faculty/kenneth-j-singleton)——他后来也成为我的另一位导师——一起写了那篇 "Transform Analysis and Asset Pricing for Affine Jump-Diffusions"。这篇 paper 是相当 technical 的，在我上 job market 之前已经被 *Econometrica* 接受了。这对我是一个很重要的洗礼，因为你能碰到各种各样的人，他们的 reactions 会 inform 你的判断；同时你内心也要有一个足够强的 core。
 
 但**也是在那时候我意识到，technical 的 work，audience 总是很 limited 的**。Affine Jump-Diffusions 这篇 paper 虽然重要，但它是一个 methodology 的 contribution——你去 present 的时候，没有 idea-driven 的 paper 那么有趣，那么能跟 audience engage。**Tool 就是一个 tool，但一个 idea，是可以 influence 很多人的**。所以我在博士阶段就意识到：我其实更喜欢做 empirical、idea-driven、有 economic insight 的工作。
 
@@ -91,7 +91,7 @@ wordCount: 17696
 
 ### 跳跃风险溢价：在"黑天鹅"还是孤例的年代
 
-**潘军**：好啊。每个学者大概都会觉得自己手头正在做的 work 是最 exciting 的（笑）。但如果让我回头梳理一下——有一篇是我自己特别有感情的，发在 *JFE* 2002 的"**The Jump-Risk Premia Implicit in Options: Evidence from an Integrated Time-Series Study**"。这篇我大概是 1999 年、2000 年初写完的。**这篇 paper 主要是用期权来 estimate：如果市场会 crash，那么市场对这个 crash 的定价是怎样的？这个定价跟我们平时面对的"小风险"是不是不一样？**
+**潘军**：好啊。每个学者大概都会觉得自己手头正在做的 work 是最 exciting 的（笑）。但如果让我回头梳理一下——有一篇是我自己特别有感情的，发在 *JFE* 2002 的"**[The Jump-Risk Premia Implicit in Options: Evidence from an Integrated Time-Series Study](https://doi.org/10.1016/S0304-405X%2801%2900088-5)**"。这篇我大概是 1999 年、2000 年初写完的。**这篇 paper 主要是用期权来 estimate：如果市场会 crash，那么市场对这个 crash 的定价是怎样的？这个定价跟我们平时面对的"小风险"是不是不一样？**
 
 我在那篇 paper 里提出了一个概念——**crash risk premium**。它的 risk trade-off，跟一般 Brownian motion / diffusion 那种波动较小的 risk 是不一样的；市场会给"罕见的、巨大的下跌"一个非常大的溢价。这是我自己发现并 push 出去的东西，后来又有很多 sequence 的工作沿着这个方向做下去。那篇 paper 写在 1987 年股灾还是唯一"黑天鹅"案例的年代——后来 2008 年金融危机、2020 年疫情，都把这种思路反复验证了一遍。
 
@@ -119,7 +119,7 @@ wordCount: 17696
 
 **冯志钢**：从一个做主权违约的宏观学者的视角看，您和 Longstaff、Singleton、Pedersen 合作的"How Sovereign is Sovereign Credit Risk?"（*AEJ: Macroeconomics*, 2011）开了一个很重要的研究范式——把主权 CDS 拆解为全球风险因子和国家特异因素。在 Eaton-Gersovitz、Arellano (2008) 这一脉宏观主权违约模型里，无风险利率 r* 一般被设为外生常数，主权利差几乎完全由本国基本面决定；但您和合作者用主成分分析发现：一个全球共同因子就能解释跨国 CDS 变动的大部分。这个 finding 对宏观学者的冲击是结构性的——金融市场对主权风险的定价比我们在模型里假设的更"全球"、更少"国别"。十几年过去了，今天再来看欧债危机、新兴市场债务，您觉得当时的结论是被强化了，还是被颠覆了？
 
-**潘军**：这篇文章前面其实还有一篇我跟 Singleton 写的 *JF* 论文（"Default and Recovery Implicit in the Term Structure of Sovereign CDS Spreads"，2008）——那是看 sovereign CDS。我先解释一下：sovereign CDS 就是这些主权国家如果发债的话，CDS 是一个 protection，CDS 越高说明这个国家的 credit 越差。
+**潘军**：这篇文章前面其实还有一篇我跟 Singleton 写的 *JF* 论文（["Default and Recovery Implicit in the Term Structure of Sovereign CDS Spreads"](https://doi.org/10.1111/j.1540-6261.2008.01399.x)，2008）——那是看 sovereign CDS。我先解释一下：sovereign CDS 就是这些主权国家如果发债的话，CDS 是一个 protection，CDS 越高说明这个国家的 credit 越差。
 
 我们当时发现的是：**所有这些国家的 sovereign CDS——包括新兴市场，也包括比较成熟的国家——他们的主权信用风险，跟美国 VIX 指数高度 comove**。换句话说，美国的"fear gauge"是这些国家主权信用的一个非常重要的 component。我那两篇 paper 就是围绕这个中心做的，第二篇做得更全面一点。
 

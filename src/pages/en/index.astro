@@ -1,0 +1,58 @@
+---
+import {getCollection} from 'astro:content';
+import SeasonTwoTeaser from '../../components/SeasonTwoTeaser.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EpisodeCard from '../../components/EpisodeCard.astro';
+import {episodeCopy} from '../../lib/episode';
+
+const episodes = (await getCollection('episodes')).sort((a, b) => a.data.episodeNumber - b.data.episodeNumber);
+---
+<BaseLayout title="Conversations with economists">
+  <header class="page-intro en-lead">
+    <p class="eyebrow">Jingbang Lunce · Insights</p>
+    <h1>A long-form interview series on how economists form judgment.</h1>
+    <p class="lead">Produced by the Chinese Economists Society. Season One is complete. Season Two is inviting scholars — in Chinese and in English.</p>
+  </header>
+
+  <section class="section home-archive">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Season One</p>
+        <h2>Eight conversations</h2>
+      </div>
+      <a class="text-link" href="/en/interviews">See the archive →</a>
+    </div>
+    <p class="archive-note">The full record of Season One is in Chinese. What follows in English is an editorial brief: who spoke, what the conversation asked, and why it is more than a regional story.</p>
+    <div class="grid archive-grid">
+      {episodes.map(episode => {
+        const copy = episodeCopy(episode.data, 'en');
+        return (
+          <EpisodeCard
+            href={`/en/interviews/${episode.id}`}
+            eyebrow={`No. ${episode.data.episodeNumber} · ${copy.guest}`}
+            title={copy.title}
+            summary={copy.summary}
+            cta={episode.data.primaryLanguage === 'en' ? 'Read the interview →' : 'Read the brief →'}
+            sealTitle={episode.data.sealTitle}
+            guest={episode.data.guest}
+            episodeNumber={episode.data.episodeNumber}
+            color={episode.data.sealColor}
+            tint={episode.data.sealTint}
+            portrait={episode.data.portrait}
+            portraitPosition={episode.data.portraitPosition}
+            portraitScale={episode.data.portraitScale}
+            fields={copy.fields}
+          />
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <p class="eyebrow">Why this series</p>
+    <blockquote>“Not only the conclusion, but where a research life began, and how a judgment was formed.”</blockquote>
+    <p>These are conversations with economists — on craft, institutions, and public reason. When the talk is in English, English is the record. When it is in Chinese, Chinese is the record, and English offers a brief.</p>
+  </section>
+
+  <SeasonTwoTeaser/>
+</BaseLayout>

@@ -1,4 +1,34 @@
 ---
-import BrandMark from './BrandMark.astro';const p=Astro.url.pathname;const active=(h:string)=>h==='/'?p==='/':p.startsWith(h);
+import BrandMark from './BrandMark.astro';
+import {isEnglishPath, normalizePath, toChinese, toEnglish} from '../lib/locale';
+
+const p = normalizePath(Astro.url.pathname);
+const en = isEnglishPath(p);
+const home = en ? '/en' : '/';
+const conversations = en ? '/en/interviews' : '/interviews';
+const about = en ? '/en/about' : '/about';
+const active = (href: string) => href === home ? p === home : p === href || p.startsWith(href + '/');
 ---
-<header class="site-header"><a class="brand" href="/" aria-label="见地首页"><BrandMark/></a><nav aria-label="主导航"><a class:list={{active:active('/interviews')}} href="/interviews">访谈</a><a class:list={{active:active('/notes')}} href="/notes">手记</a><a class:list={{active:active('/about')}} href="/about">关于</a><a class="subscribe" href="/subscribe">订阅</a></nav></header>
+<header class="site-header">
+  <a class="brand" href={home} aria-label={en ? 'Insights home' : '见地首页'}><BrandMark/></a>
+  <nav aria-label={en ? 'Primary' : '主导航'}>
+    {en ? (
+      <>
+        <a class:list={{active: active(conversations)}} href={conversations}>Conversations</a>
+        <a class:list={{active: active(about)}} href={about}>About</a>
+      </>
+    ) : (
+      <>
+        <a class:list={{active: active('/interviews')}} href="/interviews">访谈</a>
+        <a class:list={{active: active('/notes')}} href="/notes">手记</a>
+        <a class:list={{active: active('/about')}} href="/about">关于</a>
+        <a class="subscribe" href="/subscribe">订阅</a>
+      </>
+    )}
+    <span class="lang-switch">
+      <a href={toChinese(p)} lang="zh-CN" class:list={{active: !en}}>中文</a>
+      <span aria-hidden="true">/</span>
+      <a href={toEnglish(p)} lang="en" class:list={{active: en}}>EN</a>
+    </span>
+  </nav>
+</header>

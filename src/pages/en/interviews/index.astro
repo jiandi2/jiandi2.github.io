@@ -1,0 +1,82 @@
+---
+import {getCollection} from 'astro:content';
+import SeasonTwoTeaser from '../../../components/SeasonTwoTeaser.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import EpisodeCard from '../../../components/EpisodeCard.astro';
+import {episodeCopy} from '../../../lib/episode';
+
+const episodes = (await getCollection('episodes')).sort((a, b) => b.data.episodeNumber - a.data.episodeNumber);
+const latest = episodes[0];
+const fields = [...new Set(episodes.flatMap(episode => episodeCopy(episode.data, 'en').fields))].sort((a, b) => a.localeCompare(b, 'en'));
+---
+<BaseLayout title="Conversations">
+  <header class="page-intro en-lead">
+    <p class="eyebrow">Jingbang Lunce · Archive</p>
+    <h1>Economics does not only happen in models</h1>
+    <p class="lead">From the accident of a first field, to the craft of a paper, to a judgment offered in public. Season One is in Chinese; the English pages are briefs. Season Two will also be conducted in English.</p>
+  </header>
+  <nav class="filters" aria-label="Filter by field">
+    <a class="on" href="/en/interviews/" data-field="">All</a>
+    {fields.map(field => <a href={`/en/interviews/?field=${encodeURIComponent(field)}`} data-field={field}>{field}</a>)}
+  </nav>
+  <Hero episode={latest}/>
+  <SeasonTwoTeaser/>
+  <section class="section archive-section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Index · <span data-result-count>{episodes.length}</span> conversations</p>
+        <h2>Most recent first</h2>
+      </div>
+    </div>
+    <div class="grid archive-grid">
+      {episodes.map(episode => {
+        const copy = episodeCopy(episode.data, 'en');
+        return (
+          <EpisodeCard
+            href={`/en/interviews/${episode.id}`}
+            eyebrow={`No. ${episode.data.episodeNumber} · ${copy.guest}`}
+            title={copy.title}
+            summary={copy.summary}
+            cta={episode.data.primaryLanguage === 'en' ? 'Read the interview →' : 'Read the brief →'}
+            sealTitle={episode.data.sealTitle}
+            guest={episode.data.guest}
+            episodeNumber={episode.data.episodeNumber}
+            color={episode.data.sealColor}
+            tint={episode.data.sealTint}
+            portrait={episode.data.portrait}
+            portraitPosition={episode.data.portraitPosition}
+            portraitScale={episode.data.portraitScale}
+            fields={copy.fields}
+          />
+        );
+      })}
+    </div>
+  </section>
+  <p class="filter-empty" hidden>No conversation in this field yet.</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get('field') ?? '';
+    const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.filters [data-field]'));
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('.archive-section .card[data-fields]'));
+    const available = new Set(links.map(link => link.dataset.field ?? ''));
+    const active = available.has(requested) ? requested : '';
+    links.forEach(link => {
+      const on = (link.dataset.field ?? '') === active;
+      link.classList.toggle('on', on);
+      if (on) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    let visible = 0;
+    cards.forEach(card => {
+      const topics = JSON.parse(card.dataset.fields ?? '[]') as string[];
+      const show = !active || topics.includes(active);
+      card.hidden = !show;
+      if (show) visible++;
+    });
+    const count = document.querySelector<HTMLElement>('[data-result-count]');
+    if (count) count.textContent = String(visible);
+    const empty = document.querySelector<HTMLElement>('.filter-empty');
+    if (empty) empty.hidden = visible !== 0;
+  </script>
+</BaseLayout>

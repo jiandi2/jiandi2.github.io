@@ -1,4 +1,16 @@
 ---
-import SealCover from './SealCover.astro';const x=Astro.props;
+import SealCover from './SealCover.astro';
+const x = Astro.props;
+const cta = x.cta ?? '阅读全文 →';
 ---
-<article class="card" data-fields={JSON.stringify(x.fields??[])}><a class="card-link" href={x.href}><SealCover sealTitle={x.sealTitle} guest={x.guest} episodeNumber={x.episodeNumber} color={x.color} tint={x.tint} image={x.portrait} imagePosition={x.portraitPosition} imageScale={x.portraitScale} wide/><div class="card-body"><p class="eyebrow">{x.eyebrow}</p><h3>{x.title}</h3><p>{x.summary}</p><span class="text-link">阅读全文 →</span></div></a></article>
+<article class="card" data-fields={JSON.stringify(x.fields ?? [])}>
+  <a class="card-link" href={x.href}>
+    <SealCover sealTitle={x.sealTitle} guest={x.guest} episodeNumber={x.episodeNumber} color={x.color} tint={x.tint} image={x.portrait} imagePosition={x.portraitPosition} imageScale={x.portraitScale} wide/>
+    <div class="card-body">
+      <p class="eyebrow">{x.eyebrow}</p>
+      <h3>{x.title}</h3>
+      <p>{x.summary}</p>
+      <span class="text-link">{cta}</span>
+    </div>
+  </a>
+</article>

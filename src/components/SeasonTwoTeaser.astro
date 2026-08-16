@@ -1,14 +1,21 @@
 ---
 import BrandMark from './BrandMark.astro';
+import {isEnglishPath} from '../lib/locale';
+const en = isEnglishPath(Astro.url.pathname);
+const href = en ? '/en/interviews#season-two' : '/interviews/#season-two';
 ---
-<section class="season-two-preview" id="season-two" aria-label="第二季预告">
+<section class="season-two-preview" id="season-two" aria-label={en ? 'Season Two preview' : '第二季预告'}>
   <div class="season-copy">
-    <p class="eyebrow">第二季预告</p>
-    <h2>继续追问，学问如何成为一种人生</h2>
-    <p>第二季将沿着学者的来路，进入研究的手艺，也抵达由经验与思考沉淀而成的见识。</p>
-    <a class="text-link" href="/interviews/#season-two">查看第二季预告 →</a>
+    <p class="eyebrow">{en ? 'Season Two' : '第二季预告'}</p>
+    <h2>{en ? 'The conversation continues — in Chinese and in English' : '继续追问，学问如何成为一种人生'}</h2>
+    {en ? (
+      <p>Season Two follows the same three questions: origin, craft, and judgment. Some conversations will be in Chinese; some will be in English. The language of the talk is the language of the record.</p>
+    ) : (
+      <p>第二季将沿着学者的来路，进入研究的手艺，也抵达由经验与思考沉淀而成的见识。部分对话将以中文进行，部分将以英语进行；对话用什么语言，完整记录就用什么语言。</p>
+    )}
+    <a class="text-link" href={href}>{en ? 'See the Season Two preview →' : '查看第二季预告 →'}</a>
   </div>
-  <a class="season-poster" href="/interviews/#season-two" aria-label="第二季敬请期待：来路、手艺、见识">
+  <a class="season-poster" href={href} aria-label={en ? 'Season Two: origin, craft, judgment' : '第二季敬请期待：来路、手艺、见识'}>
     <div class="paper-field"><small>第二季</small><div><b>来路</b><i></i><b>手艺</b><i></i><b>见识</b></div></div>
     <div class="season-panel"><span>经邦论策</span><div class="panel-title"><b>敬</b><b>请</b><b>期</b><b>待</b></div><i></i><small>第二季</small><em>COMING SOON</em></div>
     <div class="poster-brand"><BrandMark stacked compact/></div>

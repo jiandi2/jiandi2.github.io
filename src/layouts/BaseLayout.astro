@@ -1,5 +1,40 @@
 ---
-import SiteHeader from '../components/SiteHeader.astro';import SiteFooter from '../components/SiteFooter.astro';import {SITE_NAME} from '../site-config.mjs';import '../styles/tokens.css';import '../styles/global.css';import '../styles/refinement.css';
-const {title=SITE_NAME,description='与经济学家谈学问、时代与选择。'}=Astro.props;const full=title===SITE_NAME?title:`${title}｜${SITE_NAME}`;
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import {SITE_NAME, SITE_URL} from '../site-config.mjs';
+import {isEnglishPath, toChinese, toEnglish} from '../lib/locale';
+import '../styles/tokens.css';
+import '../styles/global.css';
+import '../styles/refinement.css';
+
+const en = isEnglishPath(Astro.url.pathname);
+const {title = SITE_NAME, description} = Astro.props;
+const desc = description ?? (en
+  ? 'A long-form interview series on how economists form judgment.'
+  : '与经济学家谈学问、时代与选择。');
+const full = title === SITE_NAME ? title : (en ? `${title} · ${SITE_NAME}` : `${title}｜${SITE_NAME}`);
+const origin = Astro.site ?? SITE_URL;
+const canonical = new URL(Astro.url.pathname, origin).href;
+const zhHref = new URL(toChinese(Astro.url.pathname), origin).href;
+const enHref = new URL(toEnglish(Astro.url.pathname), origin).href;
 ---
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="description" content={description}><link rel="icon" href="/favicon.svg"><link rel="canonical" href={new URL(Astro.url.pathname,Astro.site)}><title>{full}</title></head><body><a class="skip" href="#content">跳到正文</a><SiteHeader/><main id="content"><slot/></main><SiteFooter/></body></html>
+<!doctype html>
+<html lang={en ? 'en' : 'zh-CN'}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content={desc}>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="canonical" href={canonical}>
+    <link rel="alternate" hreflang="zh-CN" href={zhHref}>
+    <link rel="alternate" hreflang="en" href={enHref}>
+    <link rel="alternate" hreflang="x-default" href={zhHref}>
+    <title>{full}</title>
+  </head>
+  <body>
+    <a class="skip" href="#content">{en ? 'Skip to content' : '跳到正文'}</a>
+    <SiteHeader/>
+    <main id="content"><slot/></main>
+    <SiteFooter/>
+  </body>
+</html>

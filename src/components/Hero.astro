@@ -1,4 +1,24 @@
 ---
-import SealCover from './SealCover.astro';const {episode}=Astro.props;
+import SealCover from './SealCover.astro';
+import {isEnglishPath} from '../lib/locale';
+import {episodeCopy} from '../lib/episode';
+
+const {episode} = Astro.props;
+const en = isEnglishPath(Astro.url.pathname);
+const copy = episodeCopy(episode.data, en ? 'en' : 'zh');
+const href = en ? `/en/interviews/${episode.id}` : `/interviews/${episode.id}`;
+const filterBase = en ? '/en/interviews' : '/interviews';
+const cta = en ? (episode.data.primaryLanguage === 'en' ? 'Read the interview →' : 'Read the brief →') : '进入本期 →';
 ---
-<section class="hero"><div><p class="eyebrow">本期特稿 · 经邦论策</p><h1>{episode.data.title}</h1><p class="lead">{episode.data.summary}</p><div class="tags">{episode.data.fields.map((f:string)=><a href={`/interviews/?field=${encodeURIComponent(f)}`}>{f}</a>)}</div><a class="button" href={`/interviews/${episode.id}`}>进入本期 →</a></div><a class="hero-cover" href={`/interviews/${episode.id}`}><SealCover sealTitle={episode.data.sealTitle} guest={episode.data.guest} episodeNumber={episode.data.episodeNumber} color={episode.data.sealColor} tint={episode.data.sealTint} image={episode.data.portrait} imagePosition={episode.data.portraitPosition} imageScale={episode.data.portraitScale} priority/></a></section>
+<section class="hero">
+  <div>
+    <p class="eyebrow">{en ? 'Featured conversation' : '本期特稿 · 经邦论策'}</p>
+    <h1>{copy.title}</h1>
+    <p class="lead">{copy.summary}</p>
+    <div class="tags">{copy.fields.map((f: string) => <a href={`${filterBase}/?field=${encodeURIComponent(f)}`}>{f}</a>)}</div>
+    <a class="button" href={href}>{cta}</a>
+  </div>
+  <a class="hero-cover" href={href}>
+    <SealCover sealTitle={episode.data.sealTitle} guest={episode.data.guest} episodeNumber={episode.data.episodeNumber} color={episode.data.sealColor} tint={episode.data.sealTint} image={episode.data.portrait} imagePosition={episode.data.portraitPosition} imageScale={episode.data.portraitScale} priority/>
+  </a>
+</section>

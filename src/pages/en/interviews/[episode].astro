@@ -1,0 +1,83 @@
+---
+import {getCollection, render} from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SealCover from '../../../components/SealCover.astro';
+import {episodeCopy} from '../../../lib/episode';
+
+export async function getStaticPaths() {
+  return (await getCollection('episodes')).map(episode => ({params: {episode: episode.id}, props: {episode}}));
+}
+
+const {episode} = Astro.props;
+const copy = episodeCopy(episode.data, 'en');
+const briefs = await getCollection('enBriefs');
+const chineseFulls = await getCollection('fulls');
+const brief = briefs.find(item => item.data.episode.id === episode.id);
+const englishFulls = episode.data.primaryLanguage === 'en' ? await getCollection('enFulls') : [];
+const englishFull = englishFulls.find(item => item.data.episode.id === episode.id || item.id === episode.id);
+const chineseFull = chineseFulls.find(item => item.id === episode.id);
+const chineseHref = chineseFull ? `/interviews/${episode.id}/full` : `/interviews/${episode.id}`;
+const renderedFull = englishFull ? await render(englishFull) : undefined;
+const renderedBrief = brief && !englishFull ? await render(brief) : undefined;
+const FullContent = renderedFull?.Content;
+const BriefContent = renderedBrief?.Content;
+const isEnglishRecord = episode.data.primaryLanguage === 'en' && !!englishFull;
+---
+<BaseLayout title={isEnglishRecord ? (englishFull?.data.title ?? copy.title) : (brief?.data.title ?? copy.title)} description={isEnglishRecord ? englishFull?.data.dek : (brief?.data.dek ?? copy.summary)}>
+  {isEnglishRecord && FullContent ? (
+    <>
+      <header class="reading-head">
+        <a class="back" href="/en/interviews">← Conversations</a>
+        <p class="eyebrow">Season {episode.data.season} · No. {episode.data.episodeNumber}</p>
+        <h1>{englishFull.data.title}</h1>
+        <p class="reading-dek">{englishFull.data.dek}</p>
+        <div class="byline">
+          <span>{copy.guest}</span>
+          <span>{copy.affiliation}</span>
+          <span>Chinese Economists Society</span>
+        </div>
+      </header>
+      <article class="reading-body">
+        <FullContent/>
+      </article>
+    </>
+  ) : (
+    <>
+      <section class="episode-intro">
+        <div class="episode-cover">
+          <SealCover sealTitle={episode.data.sealTitle} guest={episode.data.guest} episodeNumber={episode.data.episodeNumber} color={episode.data.sealColor} tint={episode.data.sealTint} image={episode.data.portrait} imagePosition={episode.data.portraitPosition} imageScale={episode.data.portraitScale} priority/>
+        </div>
+        <div>
+          <p class="eyebrow">Season {episode.data.season} · No. {episode.data.episodeNumber}</p>
+          <h1>{copy.guest}<small>{copy.affiliation}</small></h1>
+          <p class="lead">{brief?.data.dek ?? copy.summary}</p>
+          <div class="tags">{copy.fields.map((f: string) => <a href={`/en/interviews/?field=${encodeURIComponent(f)}`}>{f}</a>)}</div>
+        </div>
+      </section>
+      {BriefContent ? (
+        <article class="en-brief">
+          <BriefContent/>
+        </article>
+      ) : (
+        <section class="status">
+          <p class="eyebrow">Editorial brief</p>
+          <h1>{copy.title}</h1>
+          <p>The English brief for this conversation is being prepared.</p>
+        </section>
+      )}
+      {copy.highlights.length > 0 && (
+        <aside class="brief-clues">
+          <b>In this conversation</b>
+          <ol>{copy.highlights.map((item: string) => <li>{item}</li>)}</ol>
+        </aside>
+      )}
+      <p class="record-note">
+        {episode.data.primaryLanguage === 'zh' ? (
+          <><a href={chineseHref}>Read the full interview in Chinese</a>. The Chinese text is the record of this conversation; the English page is an editorial brief.</>
+        ) : (
+          <>This conversation will be recorded in English. A Chinese editorial account will appear on the Chinese site.</>
+        )}
+      </p>
+    </>
+  )}
+</BaseLayout>
